@@ -1,0 +1,9 @@
+# IDE generated
+.idea
+
+# Environment vars (obviously!)
+.env
+
+# Doesn't need to go upstream
+poetry.lock
+__pycache__
