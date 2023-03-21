@@ -1,7 +1,7 @@
 # TODO
 
 
- - [ ] Write a `PostsManager` to handle the used `Post IDs`
+ - [x] ~~Write a `PostsManager` to handle the used `Post IDs`~~
 
 
  - [ ] Write a `RedditClient` to handle the API requests and
