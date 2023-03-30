@@ -4,4 +4,4 @@ import dotenv
 
 
 dotenv.load_dotenv()
-sys.path.append(os.path.abspath(os.path.pardir))
+sys.path.append(os.path.abspath(os.path.curdir))
