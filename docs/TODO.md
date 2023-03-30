@@ -8,8 +8,8 @@
 filter the URLs~~
 
 
- - [ ] Write the `bot` file as the main script, and also create
-a module for the slash commands:
+ - [x] ~~Write the `bot` file as the main script, and also create
+a module for the slash commands:~~
     - [x] ~~Create the `fetch` slash command~~
 
 - [ ] Clean up the README and documentation, and create a release
