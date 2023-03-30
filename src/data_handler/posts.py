@@ -11,6 +11,8 @@ class PostsManager:
     use OrderedSets
     """
 
+    __slots__: tuple[str, str] = ("size_cap", "queue")
+
     def __init__(self: PostsManager, **configs: str | int) -> None:
         """
         The class constructor
