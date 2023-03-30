@@ -33,6 +33,16 @@ class RedditClient:
         self.fetch_limit: int = configs["FETCH_LIMIT"]
         self.media_match_regex: str = configs["MEDIA_MATCH_REGEX"]
 
+    @staticmethod
+    def filter_subreddit_name(subreddit_name: str) -> str:
+        if (
+                subreddit_name.startswith("r/") or
+                subreddit_name.startswith("u/")
+        ):
+            return subreddit_name[2:]
+        else:
+            return subreddit_name
+
     def is_media_url(self: RedditClient, post_url: str) -> bool:
         """Returns true in the case the url is pointing to a media file"""
         return bool(re.match(self.media_match_regex, post_url))
@@ -84,11 +94,16 @@ class RedditClient:
 
         :raises asyncprawcore.exceptions.Redirect: If the subreddit is
         non-existent or wasn't fetched properly
+        :raises asyncprawcore.exceptions.NotFound: Similar to Redirect
+        :raises asyncprawcore.exception.BadRequest: Invalid character used in
+        subreddit name
         """
+
+        filtered_name: str = self.filter_subreddit_name(subreddit_name)
 
         matched_urls: list[str | None] = []
         subreddit: asyncpraw.models.Subreddit = await (
-            self.reddit_client.subreddit(subreddit_name)
+            self.reddit_client.subreddit(filtered_name)
         )
 
         submission: asyncpraw.models.Submission

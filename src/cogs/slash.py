@@ -50,6 +50,13 @@ class SlashCommandCog(discord.Cog):
                 asyncprawcore.exceptions.NotFound
         ):
             await ctx.respond("Invalid Subreddit")
+        except asyncprawcore.exceptions.BadRequest:
+            await ctx.respond(
+                (
+                        "Invalid character used\n" +
+                        "Hint: Don't put `r/` or `u/` in front"
+                )
+            )
 
     @discord.command(name="fetch")
     async def send_urls(
