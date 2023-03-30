@@ -12,6 +12,6 @@ filter the URLs~~
 a module for the slash commands:~~
     - [x] ~~Create the `fetch` slash command~~
 
-- [ ] Clean up the README and documentation, and create a release
+- [x] ~~Clean up the README and documentation, and create a release~~
 
  

@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "subredbot"
+version = "0.1.0"
+description = ""
+authors = ["Ryu <singhavijeet.official@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+asyncpraw = "^7.7.0"
+pymongo = "^4.3.3"
+dnspython = "^2.3.0"
+certifi = "^2022.12.7"
+py-cord = "^2.4.0"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
