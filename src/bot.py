@@ -1,13 +1,12 @@
 from __future__ import annotations
 
 import os
-import sys
 import asyncio
 
-import dotenv
 import asyncpraw
 import discord
 
+import config
 import src.reddit_client as reddit
 import src.data_handler as handler
 import src.cogs as cogs
@@ -26,15 +25,6 @@ class DiscordBot:
     )
 
     def __init__(self: DiscordBot) -> None:
-        """
-        Instantiates all the required classes,
-        Also handles loading in the required environment variables, and
-        setting up the PATH
-        """
-
-        dotenv.load_dotenv()
-        sys.path.append(os.path.abspath(os.path.pardir))
-
         self.discord_bot = discord.Bot(
             activity=(
                 discord.Activity(
