@@ -11,5 +11,7 @@ filter the URLs~~
  - [ ] Write the `bot` file as the main script, and also create
 a module for the slash commands:
     - [ ] Create the `fetch` slash command
-    - [ ] Create the `help` slash commands, and add a help menu
 
+- [ ] Clean up the README and documentation, and create a release
+
+ 
